@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Playing Card Picker</title>
+    </head>
+    <body>
+
+<script>
+    var suit;
+    var value;
+    
+    // Pick a random number between 1 and 4
+    suit = Math.random();
+    suit = (suit * 4);
+    suit = Math.ceil(suit);
+    
+    
+    // Pick a random number between 1 and 13
+    value = Math.random();
+    value = (value * 13);
+    value = Math.ceil(value);    
+    
+    // Output to the screen
+    document.write("<h1>");
+    
+    if (value == 1) {
+        document.write("ace");
+    } else if (value == 11) {
+        document.write("jack");
+    } else if (value == 12) {
+        document.write("queen");
+    } else if (value == 13) {
+        document.write("king");
+    } else {
+        document.write(value);
+    }
+    
+    document.write(" of ");
+    
+    if (suit == 1) {
+        document.write("hearts");   
+    } else if (suit == 2) {
+        document.write("diamonds");   
+    } else if (suit == 3) {
+        document.write("clubs");   
+    } else {
+        document.write("spades"); 
+    }
+    
+    document.write("</h1>");    
+    
+</script>
+            
+
+    </body>
+</html>
